@@ -8,9 +8,15 @@ void in_order(link now){
         return;
     }
     else{
-        printf("%c", now->item);
+        if(now->item == '+'){
+            printf("(");
+        }
         in_order(now->l);
+        printf("%c", now->item);
         in_order(now->r);
+        if(now->item == '+'){
+            printf(")");
+        }
     }
 }
 

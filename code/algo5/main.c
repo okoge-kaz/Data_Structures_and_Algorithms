@@ -21,16 +21,16 @@ int main(int argc, char *argv[])
       PQinit(N);
       printf("Insert: ");
       for (i = 0; i < N; i++) {
-	      num = (rand() % 101);
-    	  printf("%d ", num);
-    	  PQinsert(num);
-    	}
+        num = (rand() % 101);
+        printf("%d ", num);
+        PQinsert(num);
+      }
       printf("\n");
       for (i = 0; i < (sizeof(a)/sizeof(a[0])); i++)	{
-    	  printf("Deletemin: %d ", PQdelmin());
-    	  printf("Insert: %d\n", a[i]);
-    	  PQinsert(a[i]);
-    	} 
+        printf("Deletemin: %d ", PQdelmin());
+        printf("Insert: %d\n", a[i]);
+        PQinsert(a[i]);
+      } 
     }
     printf("Deletemin: %d\n", PQdelmin());
 
